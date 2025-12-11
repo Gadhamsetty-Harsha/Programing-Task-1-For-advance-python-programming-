@@ -1,0 +1,11 @@
+raw = input()
+raw = raw.replace("[","").replace("]","")
+nums = list(map(int, raw.split(",")))
+
+n = int(input())
+out = []
+for i in range(n):
+    out.append(nums[i])
+    out.append(nums[i+n])
+
+print("[" + ",".join(map(str, out)) + "]")
