@@ -1,0 +1,13 @@
+raw = input()
+raw = raw.replace("[","").replace("]","")
+candies = list(map(int, raw.split(",")))
+
+extra = int(input())
+
+max_c = max(candies)
+out = []
+
+for c in candies:
+    out.append(c + extra >= max_c)
+
+print("[" + ",".join(["true" if v else "false" for v in out]) + "]")
