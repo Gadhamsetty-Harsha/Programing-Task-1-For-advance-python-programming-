@@ -1,0 +1,11 @@
+raw = input()
+raw = raw.replace("[","").replace("]","")
+nums = list(map(int, raw.split(",")))
+
+total = 0
+result = []
+for n in nums:
+    total += n
+    result.append(total)
+
+print("[" + ",".join(map(str, result)) + "]")
